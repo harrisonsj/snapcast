@@ -65,6 +65,8 @@ LibrespotStream::LibrespotStream(PcmListener* pcmListener, boost::asio::io_conte
     if (autoplay)
         params_ += " --autoplay";
     params_ += " --verbose";
+    
+    params_ += " --device-type \"computer\"";
 
     if (uri_.query.find("username") != uri_.query.end())
         uri_.query["username"] = "xxx";
